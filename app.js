@@ -249,3 +249,45 @@ function booleanInteger(number){
 console.log(booleanInteger(1))
 console.log(booleanInteger(2))
 console.log(booleanInteger(5))
+
+// Q13) check if a user is logged in and subscribed////////
+// create a function that takes in two strings. if first string is 
+// equal to `loggen_in` and the second string is equal to 
+// `subscribed` return true, otherwise return false.
+
+// isLoggedInAndSubscribed(`LOGGED_IN`, `SUBSCRIBED`)--true
+//  isLoggedInAndSubscribed(`LOGGED_IN`, `UNSUBSCRIBED`)--false
+//  isLoggedInAndSubscribed(`LOGGED_OUT`, `SUBSCRIBED`)--false
+// -----------------solution-----------------------------------
+function isLoggedInAndSubscribed(loggedIn, subscribed){
+  return loggedIn === `LOGGED_IN` && subscribed === `SUBSCRIBED`
+}
+console.log(isLoggedInAndSubscribed(`LOGGED_IN`, `SUBSCRIBED`))
+console.log(isLoggedInAndSubscribed(`LOGGED_IN`, `UNSUBSCRIBED`))
+console.log(isLoggedInAndSubscribed(`LOGGED_OUT`, `SUBSCRIBED`))
+// --------------------IF/ELSe solution-------------------------
+function isLoggedInSubscribed(string1, string2){
+    if (string1 === `LOGGED_IN` && string2 === `SUBSCRIBED`){
+        return true
+    }
+    return false
+}
+console.log(isLoggedInSubscribed(`LOGGED_IN`, `SUBSCRIBED`))
+console.log(isLoggedInSubscribed(`LOGGED_IN`, `UNSUBSCRIBED`))
+console.log(isLoggedInSubscribed(`LOGGED_OUT`, `SUBSCRIBED`))
+
+// Q14)check if the user is logged in or subscribed
+// create a function that takes in two strings.  if the first
+// string is equal to `logged_in` or the second string is equal 
+// to `SUBSCRIBED` return true, otherwise return false. 
+
+// isLoggedInOrSubscribed(`logged_in`, `subscribed`) true
+// isLoggedInOrSubscribed(`logged_in`, `unsubscribed`) false
+// isLoggedInOrSubscribed(`logged_out`, `subscribed`) false 
+// --------------------------solution-----------------------------
+function isLoggedInOrSubscribed(logged_in, subscribed){
+    return logged_in === `logged_in` || subscribed === `subscribed`
+} 
+console.log(isLoggedInOrSubscribed(`logged_in`, `subscribed`))
+console.log(isLoggedInOrSubscribed(`logged_in`, `unsubscribed`))
+console.log(isLoggedInOrSubscribed(`logged_out`, `subscribed`))
